@@ -11,7 +11,7 @@ class CourcesCollectionViewCell: UICollectionViewCell {
   
   static let reuseId = "CourcesCollectionViewCell"
 
-  var courseButton: UIButton = {
+  lazy var courseButton: UIButton = {
     let courseButton = UIButton()
     courseButton.setTitle("ryba", for: .normal)
     courseButton.setTitleColor(Brand.Colors.buttonText, for: .normal)
