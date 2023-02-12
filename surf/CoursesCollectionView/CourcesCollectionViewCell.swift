@@ -27,15 +27,9 @@ class CourcesCollectionViewCell: UICollectionViewCell {
   func setButton(for courses: [Course], button: UIButton, index: Int) -> UIButton {
     button.setTitle(courses[index].name, for: .normal)
     let isSelected = courses[index].isSelected
-    button.setTitle(courses[index].name, for: .normal)
-    if isSelected {
-      button.backgroundColor = Brand.Colors.buttonHLBG
-      button.setTitleColor(Brand.Colors.buttonTextPressed, for: .normal)
-    }
-    else {
-      button.backgroundColor = Brand.Colors.buttonBG
-      button.setTitleColor(Brand.Colors.buttonText, for: .normal)
-    }
+
+    button.backgroundColor = isSelected ? Brand.Colors.buttonHLBG : Brand.Colors.buttonBG
+    button.setTitleColor(isSelected ? Brand.Colors.buttonTextPressed : Brand.Colors.buttonText, for: .normal)
     return button
   }
   
