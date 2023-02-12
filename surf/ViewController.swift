@@ -81,7 +81,7 @@ class ViewController: UIViewController {
   }()
   
   
-  private let sendApplication: UIButton = {
+  private lazy var sendApplication: UIButton = {
     let sendApplication = UIButton()
     sendApplication.setTitle("Отправить заявку", for: .normal)
     sendApplication.setTitle("Заявка отправлена", for: .disabled)
