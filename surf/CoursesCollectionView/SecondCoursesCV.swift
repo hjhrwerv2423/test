@@ -43,7 +43,7 @@ class SecondCoursesCV: UICollectionView, UICollectionViewDelegate, UICollectionV
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     dataSecondCourses[indexPath.row].isSelected = !dataSecondCourses[indexPath.row].isSelected
-    collectionView.reloadItems(at: [indexPath])
+    collectionView.reloadData()
   }
   
   
