@@ -24,17 +24,12 @@ class SecondCoursesCV: UICollectionView, UICollectionViewDelegate, UICollectionV
     if let flowLayout = self.collectionViewLayout as? UICollectionViewFlowLayout {
       flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
     }
-
     
     translatesAutoresizingMaskIntoConstraints = false
     backgroundColor = .clear
   }
 
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-              return CGSize(width: 0, height: 80 / 2)
-          }
-  
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return dataSecondCourses.count
   }
