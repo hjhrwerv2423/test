@@ -23,13 +23,12 @@ class FirstCoursesCV: UICollectionView, UICollectionViewDelegate, UICollectionVi
 
     showsHorizontalScrollIndicator = false
     contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 30)
+    translatesAutoresizingMaskIntoConstraints = false
+    backgroundColor = .none
 
     if let flowLayout = self.collectionViewLayout as? UICollectionViewFlowLayout {
       flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
     }
-    translatesAutoresizingMaskIntoConstraints = false
-    backgroundColor = .none
-
   }
 
 
