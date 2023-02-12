@@ -15,6 +15,7 @@ class FirstCoursesCV: UICollectionView, UICollectionViewDelegate, UICollectionVi
   init() {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
+    layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
     super.init(frame: .zero, collectionViewLayout: layout)
 
     delegate = self
@@ -25,10 +26,6 @@ class FirstCoursesCV: UICollectionView, UICollectionViewDelegate, UICollectionVi
     contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 30)
     translatesAutoresizingMaskIntoConstraints = false
     backgroundColor = .none
-
-    if let flowLayout = self.collectionViewLayout as? UICollectionViewFlowLayout {
-      flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-    }
   }
 
 
