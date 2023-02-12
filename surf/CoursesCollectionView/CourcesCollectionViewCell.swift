@@ -10,7 +10,7 @@ import UIKit
 class CourcesCollectionViewCell: UICollectionViewCell {
   
   static let reuseId = "CourcesCollectionViewCell"
-
+  
   lazy var courseButton: UIButton = {
     let courseButton = UIButton()
     courseButton.setTitle("ryba", for: .normal)
@@ -23,11 +23,11 @@ class CourcesCollectionViewCell: UICollectionViewCell {
     courseButton.translatesAutoresizingMaskIntoConstraints = false
     return courseButton
   }()
-
+  
   func setButton(for courses: [Course], button: UIButton, index: Int) -> UIButton {
     button.setTitle(courses[index].name, for: .normal)
     let isSelected = courses[index].isSelected
-
+    
     button.backgroundColor = isSelected ? Brand.Colors.buttonHLBG : Brand.Colors.buttonBG
     button.setTitleColor(isSelected ? Brand.Colors.buttonTextPressed : Brand.Colors.buttonText, for: .normal)
     return button
@@ -35,9 +35,9 @@ class CourcesCollectionViewCell: UICollectionViewCell {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-
+    
     addSubview(courseButton)
-
+    
     NSLayoutConstraint.activate([
       courseButton.topAnchor.constraint(equalTo: topAnchor),
       courseButton.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -45,8 +45,8 @@ class CourcesCollectionViewCell: UICollectionViewCell {
       courseButton.bottomAnchor.constraint(equalTo: bottomAnchor),
     ])
   }
-
-
+  
+  
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }

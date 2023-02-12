@@ -24,8 +24,8 @@ class SecondCoursesCV: UICollectionView, UICollectionViewDelegate, UICollectionV
     backgroundColor = .clear
     translatesAutoresizingMaskIntoConstraints = false
   }
-
-
+  
+  
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return dataSecondCourses.count
   }

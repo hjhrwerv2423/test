@@ -113,9 +113,9 @@ class ViewController: UIViewController {
     let successAlert = UIAlertController(title: "Поздравляем!", message: "Ваша заявка успешно отправлена!", preferredStyle: .alert)
     successAlert.addAction(UIAlertAction(title: "Закрыть", style: .default, handler: nil))
     present(successAlert, animated: true) { [weak self] in
-        guard let self = self else { return }
-        self.sendApplication.isEnabled = false
-        self.sendApplication.backgroundColor = Brand.Colors.buttonBG
+      guard let self = self else { return }
+      self.sendApplication.isEnabled = false
+      self.sendApplication.backgroundColor = Brand.Colors.buttonBG
     }
   }
 }
