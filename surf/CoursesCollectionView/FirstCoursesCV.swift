@@ -9,6 +9,9 @@ import UIKit
 
 class FirstCoursesCV: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
 
+  //В карусели максимум 10 элементов по ТЗ
+  let maxItems = 10
+
   init() {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
@@ -31,8 +34,7 @@ class FirstCoursesCV: UICollectionView, UICollectionViewDelegate, UICollectionVi
 
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    //return dataFirstCourses.count
-    return 10 //В карусели максимум 10 элементов по ТЗ
+    return dataFirstCourses.count <= maxItems ? dataFirstCourses.count : maxItems
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -51,11 +53,11 @@ class FirstCoursesCV: UICollectionView, UICollectionViewDelegate, UICollectionVi
     collectionView.reloadItems(at: [indexPath])
 
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-        let indexPathForFirstCell = IndexPath(item: 0, section: 0)
-        collectionView.scrollToItem(at: indexPathForFirstCell, at: .left, animated: true)
+      let indexPathForFirstCell = IndexPath(item: 0, section: 0)
+      collectionView.scrollToItem(at: indexPathForFirstCell, at: .left, animated: true)
     }
   }
-  
+
 
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
